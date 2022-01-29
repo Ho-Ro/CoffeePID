@@ -1,5 +1,4 @@
-#ifndef WiFiNetwork_h
-#define WiFiNetwork_h
+#pragma once
 
 #include "Arduino.h"
 
@@ -14,5 +13,3 @@ class WiFiNetwork {
         String Encryption;
         String Reception;
 };
-
-#endif

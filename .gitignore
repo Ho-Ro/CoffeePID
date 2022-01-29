@@ -1,2 +1,12 @@
-
 .DS_Store
+
+www
+
+data/config.json
+
+*.new
+*.old
+*.orig
+
+*~
+.*~
