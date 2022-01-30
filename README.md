@@ -72,6 +72,14 @@ wifi SSID and password. After uploading the sketch to the ESP you can select in 
 Serial port (`dev/ttyUSB0` on my linux machine) or Network port (`silviapid at nnn.nnn.nnn.nnn`)
 and do the next uploads OTA (over the air).
 
+## QR Code to connect to the Wifi AP
+
+![WiFi Accespoint credentials](images/SilviaPID_wifi_ap_qr_code.png)
+
+## QR Code to open the CoffeePID frontend
+
+![http://silviapid](images/SilviaPID_frontend_qr_code.png)
+
 # Development
 
 As the webserver is optimized to only deliver `*.gz`-compressed files you have to unzip a file to edit it

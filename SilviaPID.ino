@@ -606,7 +606,7 @@ void handleWebRequests() {
 // * AJAX ENDPOINTS *
 // ******************
 
-void getTemp() {
+void getTemp() { // http://silviapid/ajax_get_temp
     digitalWrite( wifiLedPin, LOW ); // WiFi LED on
     server.send( 200, "text/plain",  // OK
                  String( targetTemp ) + "|"
@@ -618,7 +618,8 @@ void getTemp() {
 }
 
 
-void getStatus() { // report the temperature and PID status
+// report the temperature and PID status, url: http://silviapid/get_status
+void getStatus() {
     digitalWrite( wifiLedPin, LOW ); // WiFi LED on
     server.send( 200, "text/plain",  // OK
                  String( targetTemp ) + " "
@@ -635,7 +636,7 @@ void getStatus() { // report the temperature and PID status
 }
 
 
-void getConfig() {
+void getConfig() { // http://silviapid/ajax_get_config
     digitalWrite( wifiLedPin, LOW ); // WiFi LED on
     server.send( 200, "text/json",   // OK
                  "{ \"preferred_wifi_mode\": \"" + String( preferredWiFiMode )
@@ -700,7 +701,7 @@ void setConfig() {
 }
 
 
-void getWifis() {
+void getWifis() { // http://silviapid/ajax_get_wifis
     digitalWrite( wifiLedPin, LOW ); // WiFi LED on
     byte numSsid = WiFi.scanNetworks();
     WiFiNetwork networks[numSsid];
